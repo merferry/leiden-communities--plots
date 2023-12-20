@@ -17,14 +17,14 @@ set grid y
 
 ## Draw plot
 plot "leiden-compare.csv" \
-     using ($3/1000):xtic(1) title 'Vite (Leiden)'     with histogram fill pattern 3, \
-  '' using ($5/1000):xtic(1) title 'Grappolo (Leiden)' with histogram fill pattern 3, \
-  '' using ($7/1000):xtic(1) title 'NetworKit Leiden'  with histogram fill pattern 3, \
-  '' using ($8/1000):xtic(1) title 'GVE-Leiden'        with histogram fill pattern 3 ls 8, \
-  '' using ($0-5.0/20):(2.1*$3/1000):(sprintf("%.0f", $3/1000)) with labels rotate by 90 offset character 0,0 title '', \
-  '' using ($0-1.5/20):(2.1*$5/1000):(sprintf("%.0f", $5/1000)) with labels rotate by 90 offset character 0,0 title '', \
-  '' using ($0+1.5/20):(2.1*$7/1000):(sprintf("%.0f", $7/1000)) with labels rotate by 90 offset character 0,0 title '', \
-  '' using ($0+5.0/20):(2.1*$8/1000):(sprintf("%.1f", $8/1000)) with labels rotate by 90 offset character 0,0 title ''
+     using ( $3/1000):xtic(1) title 'Original Leiden'   with histogram fill pattern 3, \
+  '' using ( $6/1000):xtic(1) title 'igraph Leiden'     with histogram fill pattern 3, \
+  '' using ( $9/1000):xtic(1) title 'NetworKit Leiden'  with histogram fill pattern 3, \
+  '' using ($12/1000):xtic(1) title 'GVE-Leiden'        with histogram fill pattern 3 ls 8, \
+  '' using ($0-5.0/20):( $3/1000):(sprintf("%.0f",  $3/1000)) with labels textcolor rgb 'white' rotate by 90 offset character 0,-1 title '', \
+  '' using ($0-1.5/20):( $6/1000):(sprintf("%.0f",  $6/1000)) with labels textcolor rgb 'white' rotate by 90 offset character 0,-1 title '', \
+  '' using ($0+1.5/20):( $9/1000):(sprintf("%.0f",  $9/1000)) with labels rotate by 90 offset character 0,-1 title '', \
+  '' using ($0+5.0/20):($12/1000):(sprintf("%.1f", $12/1000)) with labels textcolor rgb 'white' rotate by 90 offset character 0,-1 title ''
   # '' using 2 title '' ls 1 lw 3 with linespoints axes x1y2, \
   # '' using 4 title '' ls 2 lw 3 with linespoints axes x1y2, \
   # '' using 6 title '' ls 3 lw 3 with linespoints axes x1y2, \
