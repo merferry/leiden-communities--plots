@@ -10,7 +10,7 @@ set style fill solid border lt -1
 set style textbox opaque noborder
 set xtics rotate by 30 right
 set key above font ",12"
-set ylabel  '{/:Bold Runtime (s)}'
+set ylabel  '{/:Bold Modularity}'
 set ytics 0.1
 set yrange [0.5:]
 set grid y
