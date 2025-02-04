@@ -19,11 +19,11 @@ set grid y
 
 ## Draw plot
 plot "leiden-compare.csv" \
-     using  4:xtic(1) title 'Original Leiden'   with histogram fill pattern 3, \
-  '' using  7:xtic(1) title 'igraph Leiden'     with histogram fill pattern 3, \
-  '' using 10:xtic(1) title 'NetworKit Leiden'  with histogram fill pattern 3, \
-  '' using 16:xtic(1) title 'cuGraph Leiden'    with histogram fill pattern 3, \
-  '' using 13:xtic(1) title 'GVE-Leiden'        with histogram fill pattern 3 ls 8, \
+     using  4:xtic(1) title 'Original Leiden [CPU]'   with histogram fill pattern 3, \
+  '' using  7:xtic(1) title 'igraph Leiden [CPU]'     with histogram fill pattern 3, \
+  '' using 10:xtic(1) title 'NetworKit Leiden [CPU]'  with histogram fill pattern 3, \
+  '' using 16:xtic(1) title 'cuGraph Leiden [GPU]'    with histogram fill pattern 3, \
+  '' using 13:xtic(1) title 'GVE-Leiden [CPU]'        with histogram fill pattern 3 ls 8, \
   '' using ($0-5.75/20):( $4):(sprintf("%.1e",  $4)) with labels textcolor rgb 'white' rotate by 90 offset character 0,-1.5 title '', \
   '' using ($0-2.75/20):( $7):($7>=1e-6? sprintf("%.1e",  $7) : "") with labels textcolor rgb 'white' rotate by 90 offset character 0,-1.5 title '', \
   '' using ($0-2.75/20):( $7):($7< 1e-6? sprintf("%.1e",  $7) : "") with labels textcolor rgb 'black' rotate by 90 offset character 0,1.5 title '', \
