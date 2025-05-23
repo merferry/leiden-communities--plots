@@ -1,5 +1,5 @@
 set term pdf
-set terminal pdf size 10in,2.5in
+set terminal pdf size 7.5in,2.5in
 set output 'leiden-disconnected.pdf'
 
 
